@@ -2,6 +2,8 @@ package com.sopa89.testerMod.item;
 
 import java.util.Random;
 
+import com.sopa89.testerMod.handler.ConfigurationHandler;
+
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.passive.EntityCow;
 import net.minecraft.entity.passive.EntityMooshroom;
@@ -16,7 +18,7 @@ public class ItemMagicWand extends ItemTM
 		super();
 		this.setUnlocalizedName("magicWand");
 		this.setMaxStackSize(1);
-		this.setMaxDamage(256);
+		this.setMaxDamage(ConfigurationHandler.magicWandDurability);
 	}
 	
 	@Override
@@ -32,7 +34,7 @@ public class ItemMagicWand extends ItemTM
 			}
 			else if(target instanceof EntityCow && !(target instanceof EntityMooshroom))
 			{
-				if(rand.nextInt(100)<=99)
+				if(rand.nextInt(100)<=5)
 				{
 					EntityMooshroom newShroom=new EntityMooshroom(player.worldObj);
 					

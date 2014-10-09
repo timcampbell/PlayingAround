@@ -12,8 +12,8 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 public class ConfigurationHandler 
 {
 	public static Configuration config;
-	public static boolean testValue=true;
-	public static int startOreSpawn=16;
+	public static boolean magicWandEnabled;
+	public static int magicWandDurability;
 	
 	public static void init(File configFile)
 	{
@@ -35,8 +35,8 @@ public class ConfigurationHandler
 	
 	private static void loadConfiguration()
 	{
-		testValue=config.getBoolean("testValue", Configuration.CATEGORY_GENERAL, true, "Test Configuration File");
-		startOreSpawn=config.getInt("startOreSpawn", Configuration.CATEGORY_GENERAL, 16, 0, 45, "Start Level for Ore Spawns(Just a Test)");
+		magicWandEnabled=config.getBoolean("wandEnabled", Configuration.CATEGORY_GENERAL, true, "Is the magic wand enabled as an item");
+		magicWandDurability=config.getInt("wandDurability", Configuration.CATEGORY_GENERAL, 256, 10, 512, "number of times the magic wand can be used be for it breaks");
 		
 		if(config.hasChanged())
 		{
