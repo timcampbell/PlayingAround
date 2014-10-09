@@ -1,0 +1,4 @@
+item.testermod:magicWand.name=Magic Wand
+item.testermod:wandHilt.name=Wand Hilt
+
+itemGroup.testermod=Tester Mod

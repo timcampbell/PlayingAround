@@ -1,0 +1,21 @@
+[
+{
+    "modid": "TesterMod",
+    "name": "Tester Mod",
+    "description": "Just to mess around with stuff",
+    "version": "0.1",
+    "mcversion": "1.7.10",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [
+        "Sopa89"
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [
+    ],
+    "parent": "",
+    "dependencies": [
+    ]
+}
+]
